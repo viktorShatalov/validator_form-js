@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validator</title>
+    <script src="validator/validator.js"></script>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="validator/validator.css">
+</head>
+
+<body>
+    <section>
+        <form id="myForm">
+            <ladel for="email">email</ladel>
+            <input type="text" name="email" id="email">
+            <ladel for="phone">phone</ladel>
+            <input type="text" name="phone" id="phone">
+            <br>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+        </form>
+    </section>
+
+    <script>
+        const valid = new Validator({
+            id: "myForm",
+            method: {
+                'email': [
+                    ['notEmpty'],
+                    ['pattern', 'email']
+                ],
+                'phone': [
+                    ['notEmpty'],
+                    ['pattern', 'phone']
+                ]
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

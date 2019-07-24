@@ -1,0 +1,12 @@
+.validator_succes {
+    border: 2px solid green;
+}
+
+.validator_error {
+    border: 2px solid red;
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+}
